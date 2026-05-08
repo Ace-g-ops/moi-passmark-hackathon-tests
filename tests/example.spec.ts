@@ -12,7 +12,7 @@ test.use({
 });
 
 test("Shopping cart tests", async ({ page }) => {
-  test.setTimeout(60_000); // increase timeout for AI execution
+  test.setTimeout(120_000); // increase timeout for AI execution
   await runSteps({
     page,
     userFlow: "Add product to cart",
