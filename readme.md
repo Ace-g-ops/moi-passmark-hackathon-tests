@@ -23,9 +23,9 @@ and executed by AI via Playwright.
 
 ## Project Structure
 
-
+```bash
 tests/
-
+```
 ```bash
 ayo-olopon/
 gameplay.spec.ts
