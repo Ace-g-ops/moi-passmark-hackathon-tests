@@ -25,13 +25,15 @@ test("Rally-Voting Test", async ({ page }) => {
     page,
     userFlow: "Rally Voting Test",
     steps: [
-      { description: "Navigate to https://rallly.co/" },
-      { description: "Click on an existing poll" },
-      { description: "Select a date option to vote for" },
+      { description: "Navigate to //https://rallly.co/invite/uO38fOjM9Vzh" },
+      { description: "Click on continue button to join the poll" },
+      { description: "fill in your details" },
+      {description: "click on submit button"},
     ],
 
     assertions: [
-      { assertion: "Your vote is registered and visible in the poll results" },
+      { assertion: "your details are submitted" },
+      { assertion: "you can see your name on the list of participants" },
     ],  
     test,
     expect

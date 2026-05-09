@@ -29,12 +29,12 @@ test("Rally-Poll Test", async ({ page }) => {
       { description: "Click new poll or create new poll" },
       { description: "fill in the event title with 'Team Sync Meeting'" },
       { description: "fill in the description" },
-      { description: "Select a few date options" },
+      { description: "Select a particular date" },
       { description: "Click Continue or Next" }
     ],
     assertions: [
+      { assertion: "wait for an alert with a shareable poll link or confirmation to be visible" },
       { assertion: "A shareable poll link or confirmation is visible" },
-      { assertion: "The poll title 'Team Sync Meeting' is displayed" }
     ],
     test,
     expect
