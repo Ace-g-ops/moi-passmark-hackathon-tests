@@ -23,24 +23,29 @@ and executed by AI via Playwright.
 
 ## Project Structure
 
-```
+
 tests/
 
+```bash
 ayo-olopon/
 gameplay.spec.ts
-
+```
+```bash
 hoppscotch/
 api-request.spec.ts
-
+```
+```bash
 hashnode/
 feed.spec.ts
 search.spec.ts
 article.spec.ts
-
+```
+```bash
 rallly/
 create-poll.spec.ts
 voting.spec.ts
-
+```
+```bash
 cal/
 booking.spec.ts
 
