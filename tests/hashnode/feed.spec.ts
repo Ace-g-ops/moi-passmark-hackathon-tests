@@ -30,6 +30,7 @@ test("Hashnode Feed Test", async ({ page }) => {
     ],
 
     assertions: [
+      { assertion: "the sidebar with hashnode sections is visible" },
       { assertion: "the feed is displayed" },
       { assertion: "the feed contains relevant contents" },
     ],  

@@ -26,12 +26,13 @@ test("Hashnode Article Search Test", async ({ page }) => {
     userFlow: "Hashnode Article Search Test",
     steps: [
       { description: "Navigate to //https://https://hashnode.com/" },
-      { description: "click on the search section on the sidebar" },
+      { description: "click on any articles on the feed" },
     ],
 
     assertions: [
-      { assertion: "the search results are displayed" },
-      { assertion: "the search results contain Laravel-related content" },
+      { assertion: "an article cover image or thumbnail is visible at the top" },
+      { assertion: "the author name is visible on the page" },
+      { assertion: "the contents of the article is visible below the cover image or thumbnail"}
     ],  
     test,
     expect

@@ -25,16 +25,13 @@ test("Hashnode Search Test", async ({ page }) => {
     page,
     userFlow: "Hashnode Search Test",
     steps: [
-      { description: "Navigate to //https://https://hashnode.com/" },
-      { description: "click on the search section on the sidebar" },
+      { description: "Navigate to //https://https://hashnode.com/search" },
       { description: "click on the search bar and type 'Laravel'" },
       {description: "tap enter to click the search button"},
-      { description: "wait for the search results to load" },
     ],
 
     assertions: [
-      { assertion: "the search results are displayed" },
-      { assertion: "the search results contain Laravel-related content" },
+      { assertion: "Search results are visible with article titles related to Laravel" }
     ],  
     test,
     expect
