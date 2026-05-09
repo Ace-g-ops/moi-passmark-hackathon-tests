@@ -19,20 +19,24 @@ test.use({
   headless: !!process.env.CI,
 });
 
-test("Rally Platform Test", async ({ page }) => {
+test("Rally-Voting Test", async ({ page }) => {
   test.setTimeout(120_000); // increase timeout for AI execution
   await runSteps({
     page,
-    userFlow: "Rally Event and Ticket Booking",
+    userFlow: "Rally-Voting Test",
     steps: [
-      { description: "Navigate to https://rally.co/" },
-      { description: "Create an event" },
-      { description: "add a title"},
-      { description: "add some date options" },
+      { description: "Navigate to https://rallly.co/" },
+      { description: "Fill in your name" },
+      { description: "Select availability for each date. options"},
+      { description: "Click submit or confirm vote" },
       { description: "Submit"}
       
     ],
-    assertions: [{ assertion: "The event was created and the shareable link is visible" }],
+    assertions: [{
+ assertion: "The poll title and date options visible."
+assertion: " A submit or confirm vote button is visible after selecting availability."
+assertion: "A thank you or confirmation message is shown after voting"
+ }],
     test,
     expect
   });
