@@ -19,19 +19,20 @@ test.use({
   headless: !!process.env.CI,
 });
 
-test("Rally-voting Test", async ({ page }) => {
+test("Rally Platform Test", async ({ page }) => {
   test.setTimeout(120_000); // increase timeout for AI execution
   await runSteps({
     page,
-    userFlow: "Rally-voting Test",
+    userFlow: "Rally Event and Ticket Booking",
     steps: [
-      { description: "Navigate to https://ayo-game-zeta.vercel.app/" },
-      { description: "Choose your Avatar" },
-      { description: "Choose either Single Players or Two Players" },
-      { description: "Select Difficulty level: Easy || Medium || Hard" },
-      { description: "Start the game" },
+      { description: "Navigate to https://rally.co/" },
+      { description: "Create an event" },
+      { description: "add a title"},
+      { description: "add some date options" },
+      { description: "Submit"}
+      
     ],
-    assertions: [{ assertion: "The game board is visible with pits and seeds, and it shows Player 1's turn" }],
+    assertions: [{ assertion: "The event was created and the shareable link is visible" }],
     test,
     expect
   });
