@@ -68,3 +68,8 @@ npx playwright test tests/ayo-olopon --project chromium
 **6. Run all tests**
 ```bash
 npx playwright test --project chromium
+
+## Author
+
+**Ace (Victor Ajibua)** · [@acethegeek](https://hashnode.com/@acethegeek) 
+· [@that_LaravelGuy](https://x.com/that_LaravelGuy)
