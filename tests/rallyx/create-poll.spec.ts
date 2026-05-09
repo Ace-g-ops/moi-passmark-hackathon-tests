@@ -19,21 +19,20 @@ test.use({
   headless: !!process.env.CI,
 });
 
-test("Rally Platform Test", async ({ page }) => {
-  test.setTimeout(120_000); // increase timeout for AI execution
+test("Rally-Poll Test", async ({ page }) => {
+  test.setTimeout(300_000); // increase timeout for AI execution
   await runSteps({
     page,
-    userFlow: "Rally Event and Ticket Booking",
+    userFlow: "Rally Poll Test",
     steps: [
-      { description: "Navigate to https://rally.co/" },
-      { description: "Create an event" },
-      { description: "add a title"},
-      { description: "add some date options" },
-      { description: "Submit"}
-
-    ],
-    assertions: [{ assertion: "The event was created and the shareable link is visible" }],
-    test,
-    expect
-  });
-});
+  { description: "Navigate to https://rallly.co" },
+  { description: "Click New Poll or Create a poll" },
+  { description: "Fill in the event title with 'Team Sync Meeting'" },
+  { description: "Fill in the description" },
+  { description: "Select a few date options" },
+  { description: "Click Continue or Next" },
+],
+assertions: [
+  { assertion: "A shareable poll link or confirmation is visible" },
+  { assertion: "The poll title 'Team Sync Meeting' is displayed" }
+]
