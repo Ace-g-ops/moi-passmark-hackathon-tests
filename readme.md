@@ -22,6 +22,8 @@ and executed by AI via Playwright.
 | [Cal.com](https://cal.com) | Scheduling / Productivity | ⚠️ Partial |
 
 ## Project Structure
+
+```
 tests/
 
 ayo-olopon/
@@ -41,6 +43,8 @@ voting.spec.ts
 
 cal/
 booking.spec.ts
+
+```
 
 ## Setup
 
