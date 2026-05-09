@@ -25,14 +25,18 @@ test("Rally-Poll Test", async ({ page }) => {
     page,
     userFlow: "Rally Poll Test",
     steps: [
-  { description: "Navigate to https://rallly.co" },
-  { description: "Click New Poll or Create a poll" },
-  { description: "Fill in the event title with 'Team Sync Meeting'" },
-  { description: "Fill in the description" },
-  { description: "Select a few date options" },
-  { description: "Click Continue or Next" },
-],
-assertions: [
-  { assertion: "A shareable poll link or confirmation is visible" },
-  { assertion: "The poll title 'Team Sync Meeting' is displayed" }
-]
+      { description: "Navigate to https://rallly.co/" },
+      { description: "Click new poll or create new poll" },
+      { description: "fill in the event title with 'Team Sync Meeting'" },
+      { description: "fill in the description" },
+      { description: "Select a few date options" },
+      { description: "Click Continue or Next" }
+    ],
+    assertions: [
+      { assertion: "A shareable poll link or confirmation is visible" },
+      { assertion: "The poll title 'Team Sync Meeting' is displayed" }
+    ],
+    test,
+    expect
+  });
+});
