@@ -1,4 +1,4 @@
-# Breaking Apps with AI 🤖
+# Breaking Apps with Passmark Playwtight OpenSource Tool 🤖
 
 > Testing 5 live applications using Passmark — an AI-powered Playwright testing library by Bug0.
 > No selectors. No page objects. Just plain English.
